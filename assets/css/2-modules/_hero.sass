@@ -1,0 +1,45 @@
+header#welcome
+	background-color: #FF9933
+	padding-top: 90px
+	height: calc(100vh - 70px)
+	background:
+		image: url(../img/huge/mountainView2.jpg)
+		position: center
+		size: cover
+
+	.flex-container
+		display: block
+		max-width: 800px
+		margin: 0 auto
+
+		.hero
+			display: flex
+			padding: 0
+			margin: 0
+			//margin-bottom: -50px
+			background:
+				image: url(../img/logo.png)
+				position: left top
+				repeat: no-repeat
+				size: 50%
+			min-height: 300px
+
+@media (max-width: 700px)
+	header#welcome
+
+		.flex-container
+			margin: 0
+			padding: 0
+			position: absolute
+			bottom: 0px
+
+			.hero
+				margin: 0
+				padding: 0
+				//margin-top: calc(100vh - 350px)
+				width: calc(100vw - 14px)
+				background:
+					size: 100%
+					position: left bottom
+				margin-top: 150px
+

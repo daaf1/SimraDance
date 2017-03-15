@@ -1,0 +1,60 @@
+header#presentation.page
+	min-height: 100vh
+	padding: 0
+	margin: 0
+	padding-top: 50px
+	background:
+		color: #FF5B42
+		//image: url(../img/dark_embroidery1.png)
+		//repeat: repeat
+		
+	.flex-container
+		padding: 0 10px
+		margin-left: auto
+		margin-right: auto
+
+		.presentation
+
+			h1
+				padding: 0
+				margin: 0
+				width: 100%
+
+			section
+				width: 70%
+
+			img
+				padding: 5px
+				margin: 0
+				width: 25%
+				float: right
+				border-radius: 25px
+		.wrapper
+			display: flex
+			flex-direction: rows
+
+			.la-dance-oriental
+				padding: 0 5px
+
+				.text-align-right
+					float: right
+
+			.nous
+				padding: 0 5px
+
+
+@media (max-width: 700px)
+	.presentation
+		img
+			width: 15%
+
+	.wrapper
+		flex-direction: column
+
+		.la-dance-oriental .nous
+			flex: 1 100%
+
+@media (max-width: 320px)
+	.presentation
+		img
+			display: none

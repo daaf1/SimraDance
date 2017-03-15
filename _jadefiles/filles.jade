@@ -1,0 +1,20 @@
+mixin face(img, txt, name)
+	li.face(style="background-image: url(assets/img/bio/#{img});")
+		.bubble
+			p {% include /biographies/#{txt} %}
+			.cite - #{name}
+
+header#filles.page
+
+	.flex-container
+		h1 Les filles
+
+		ul.faces
+			+face("bio_marga2.jpg", "margarita.html", "Margarita")
+			+face("bio_aline.png", "aline.html", "Aline")
+			+face("bio_caroline.png", "caroline.html", "Caroline")
+			+face("bio_jeannette.png", "jeannette.html", "Jeanette")
+			+face("bio_marianne.png", "marianne.html", "Marianne")
+			+face("bio_olivianne.png", "olivianne.html", "Olivianne")
+			+face("bio_valerie.png", "valerie.html", "Valerie")
+			+face("bio_marie.png", "marie.html", "Marie")

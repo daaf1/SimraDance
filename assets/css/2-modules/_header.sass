@@ -1,0 +1,169 @@
+.home-wrap 
+	header#nav
+		display: block
+		position: fixed
+		z-index: 10001
+		padding: 0
+		margin: 0
+		background: #FF9933
+
+		.header-position
+			top: 0
+			left: 0
+			bottom: 0
+			width: 100vw
+			height: 60px
+			display: flex
+			flex-direction: rows
+			justify-content: space-between
+
+			a	
+				color: #7F2643 //Purple
+				font-family: 'Harrington'
+				font-size: 18px
+				//font-weight: bold
+
+			&:hover, &:active
+				color: white
+
+		.logo
+			+hide-text
+			//min-width: 25%
+			//max-width: 200px
+			background:
+				image:url(/assets/img/TopTitle.png)
+				repeat: no-repeat
+				position: left
+				size: contain
+			//height: 80px
+			padding: 0
+			margin: 0
+				
+		.site-nav
+			padding-right: 20px
+			ul
+				list-style: none
+				margin-top: 30px
+				display: flex
+				flex-direction: rows
+
+			li
+				margin: 0 5px
+				
+
+			&:last-child
+				margin-bottom: 0
+
+	.mobile-nav-toggle
+		display: none
+		width: 50px
+		height: 50px
+		margin: 0 20px
+		margin-top: 10px 
+		//background: pink
+		align-items: center
+		cursor: pointer
+		float: right
+
+		span,
+		span:before,
+		span:after
+			content: ""
+			display: block
+			width: 50px
+			height: 2px
+			background: #7F2643
+			position: relative
+			transition: all 0.3s ease-in-out
+
+		span:before
+			top: 13px
+
+		span:after
+			top: -15px 
+
+
+		&.is-open span:before
+			top: 0
+
+		&.is-open span
+			transform: rotate(-90deg)
+
+		&.is-open span:after
+			transform: rotate(90deg)
+			top: -2px
+			left: 10px
+
+	.mobil-nav
+		display: none
+		position: fixed
+		width: 100%
+		background: #FF9933
+		//padding-top: 80px
+		transform: translateY(-100%)
+		transition: all 0.3s ease-in-out
+
+		ul
+			list-style: none
+			margin: 0
+			padding: 0
+
+		li
+			text-align: center
+			margin-bottom: 10px
+
+		
+@media (max-width: 1000px)
+	.home-wrap
+		header#nav
+			.header-position
+				display: flex
+				flex-direction: column
+				position: relative
+				top: auto
+				bottom: auto
+				left: auto
+				height: 70px
+
+			.site-nav
+				padding: 0
+				margin: 0
+
+				ul
+					margin: 0
+					padding: 0
+					justify-content: flex-start
+
+			.logo
+				//line-height: 50px
+				background:
+					width: 200px
+					height: 50px
+
+		.mobile-nav-toggle
+			display: none
+
+		.mobil-nav.is-open
+			display: none
+
+
+@media (max-width: 700px)
+	.home-wrap
+		header#nav
+			.header-position
+				flex-direction: row
+
+			.site-nav
+				display: none
+
+			.logo
+				background:
+					width: 200px
+					height: 50px
+
+		.mobile-nav-toggle
+			display: flex
+
+		.mobil-nav.is-open
+			display: block
+			transform: translateY(0%)
